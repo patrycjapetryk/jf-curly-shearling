@@ -1,0 +1,134 @@
+@import '../_variables';
+@import '../_mixins';
+
+.gallery {
+  @include main-margin-bottom;
+  @include main-padding;
+
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+
+  &--center {
+    justify-content: center;
+    gap: 4%;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    position: relative;
+
+    &--l {
+      width: 65%;
+
+      @media (max-width: $breakpoint-mobile-width) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    &--m {
+      width: 38%;
+      margin: 0 6%;
+
+      @media (max-width: $breakpoint-mobile-width) {
+        width: 100%;
+        margin: 0 8% 30px;
+      }
+    }
+
+    &--s {
+      width: 36%;
+
+      @media (max-width: $breakpoint-mobile-width) {
+        width: 100%;
+        margin: 0 8% 30px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      &:first-child {
+        margin-top: 60px;
+      }
+    }
+
+    &--xs {
+      width: 24%;
+      margin: 0 0 16px;
+
+      @media (max-width: $breakpoint-tablet-width) {
+        width: 49%;
+      }
+
+      @media (max-width: $breakpoint-mobile-width) {
+        width: 100%;
+      }
+    }
+
+    &--vertical-align-bottom {
+      justify-content: flex-end;
+    }
+
+    &--vertical-align-center {
+      justify-content: center;
+    }
+
+    &--vertical-align-space-between {
+      justify-content: space-between;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__image-title {
+    position: absolute;
+    top: -6%;
+    right: -5%;
+    width: 195%;
+    pointer-events: none;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__title {
+    width: 100%;
+    font-size: $global-font-size-m;
+    font-weight: $global-font-weight;
+    margin: 15px 0 10px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    margin-top: 13px;
+  }
+
+  &__cta {
+    display: inline-block;
+    font-size: $button-font-size;
+    color: $button-color;
+    line-height: $button-line-height;
+    text-decoration: none;
+    border-bottom: 1px solid $main-color;
+  }
+}
