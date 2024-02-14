@@ -3,7 +3,7 @@
 
 # Jenny Fairy Curly Shearling
 
-Landing Page for Jenny Fairy, a fashion brand. It was built using Vanilla JS, SCSS, and Vite.
+Landing Page for Jenny Fairy, a fashion brand. It was built using Vanilla JS, SCSS, PIXI.js and Vite.
 
 - **Online version**: [Open live demo](https://jf-curly-shearling.netlify.app/)
 
